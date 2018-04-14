@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>注册界面链接</title>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+
+<!定义链接的样式与图形>
+
+</head>
+<body>
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<div class="logo_box">
+						<h3>个人网页系统欢迎您</h3>
+						<form action="#" name="f" method="post" onsubmit = "return checkUser();">
+							<div class="input_outer">
+								<span class="u_user"></span>
+								<input name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="设置用户名">
+							</div>
+							<div class="input_outer">
+								<span class="us_uer"></span>
+								<input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="设置密码">
+								
+							</div>
+							<div class="input_outer">
+								<span class="us_uer"></span>
+								<input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password"  placeholder="确认密码">
+							</div>
+							<div class="input_outer">
+								<span class="us_er"></span>
+								<input name="useremail" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="email" placeholder="设置邮箱">
+								
+							</div>
+							
+
+						<!-- //script for password confirmation -->
+							<div class="mb2"><a class="act-but submit" href="index.html"  style="color: #FFFFFF" button type="button" onclick ="alert('注册成功请登录')">立即注册</button></a></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	<script type="text/javascript">
+		window.onload = function () {
+		document.getElementById("password1").onchange = validatePassword;
+		document.getElementById("password2").onchange = validatePassword;
+		}
+		function validatePassword(){
+		var pass2=document.getElementById("password2").value;
+		var pass1=document.getElementById("password1").value;
+		if(pass1!=pass2)
+			document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+		else
+		document.getElementById("password2").setCustomValidity('');	 
+		//empty string means no validation error
+		}
+	</script>
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+		<div style="text-align:center;">
+</div>
+	</body>
+</html>
